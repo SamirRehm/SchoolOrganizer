@@ -36,8 +36,22 @@ public class Task {
     public void startTask() {
         dateTimeWhenStarted.setDate(0);
     }
+    
+    public Status getStatus() {
+        return this.status;
+    }
 
     public void setStatus(Status status) {
         this.status = status;
     }
+    
+    public int getPriority() {
+        return this.priority;
+    }
+    
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+    
+    
 }

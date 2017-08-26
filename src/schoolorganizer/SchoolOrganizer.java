@@ -26,8 +26,10 @@ public class SchoolOrganizer {
         facade.addTaskToStatus(newTask, status);
     }
     
-    public void moveToStatus(Task task, Status status) {
-        task.setStatus(status);
+    public void moveToStatus(Task task, Status destinationStatus, Status sourceStatus) {
+        task.setStatus(destinationStatus);
+        facade.addTaskToStatus(task, destinationStatus);
+        facade.removeTaskFromStatus(task, sourceStatus);
     }
     
     public List<Status> getStatuses() {

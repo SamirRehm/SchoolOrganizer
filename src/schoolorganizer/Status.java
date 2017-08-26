@@ -26,4 +26,12 @@ public class Status {
     public List<Task> getTasks() {
         return this.tasks;
     }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
 }

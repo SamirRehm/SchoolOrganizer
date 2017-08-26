@@ -24,6 +24,11 @@ public class SchoolOrganizerFacade {
     public void addTaskToStatus(Task newTask, Status status) {
         status.getTasks().add(newTask);
     }
+
+    public void removeTaskFromStatus(Task task, Status status) {
+       int index = status.getTasks().indexOf(task);
+       status.getTasks().remove(index);
+    }
     
     
 }
